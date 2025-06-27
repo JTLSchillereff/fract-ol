@@ -15,7 +15,7 @@
 int	julia_shift(int x, int y, t_fractol *f)
 {
 	f->kr = f->min_r + (double)x * (f->max_r - f->min_r) / WIDTH;
-	f->ki = f->max_i + (double)y * (f->max_i - f->max_i) / HEIGHT;
+	f->ki = f->max_i + (double)y * (f->min_i - f->max_i) / HEIGHT;
 	render(f);
 	return (0);
 }
@@ -31,7 +31,7 @@ int	julia(t_fractol *f, double zr, double zi)
 		if ((zi * zi + zr * zr) > 4.0)
 			break ;
 		tmp = 2 * zr * zi + f->ki;
-		zr = zr * zr - zi + f->kr;
+		zr = zr * zr - zi * zi + f->kr;
 		zi = tmp;
 		n++;
 	}

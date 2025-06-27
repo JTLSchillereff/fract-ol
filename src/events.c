@@ -120,6 +120,11 @@ int	mouse_event(int keycode, int x, int y, t_fractol *mlx)
 	}
 	else if (keycode == MOUSE_WHEEL_DOWN)
 		zoom(mlx, 2);
+	else if (keycode == MOUSE_BTN)
+	{
+		if (mlx->set == JULIA)
+			julia_shift(x, y, mlx);
+	}
 	else
 		return (0);
 	render(mlx);

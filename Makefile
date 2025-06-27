@@ -11,9 +11,24 @@ LIBFT_NAME	= libft.a
 LIBFT		= $(LIBFT_PATH)$(LIBFT_NAME)
 
 INC		= -I ./includes/ -I ./libft/ -I ./minilibx-linux/
-SRC_PATH	= str/
-SRC		= color.c events.c fractol.c help_msg.c initialization.c parse_args.c\
-			render.c utils.c
+SRC_PATH	= src/
+SRC		= color.c \
+		events.c \
+		fractol.c \
+		help_msg.c \
+		initialization.c \
+		parse_args.c\
+		render.c \
+		utils.c \
+		fractal_sets/mandelbrot.c \
+		fractal_sets/julia.c \
+		fractal_sets/burning_ship.c \
+		fractal_sets/tricorn.c \
+		fractal_sets/mandelbox.c \
+		color_schemes/color_interpolated.c \
+		color_schemes/color_special.c \
+		color_schemes/color_striped.c 
+
 SRCS		= $(addprefix $(SRC_PATH), $(SRC))
 
 OBJ_PATH	= obj/
@@ -25,10 +40,12 @@ all: $(MLX) $(LIBFT) $(NAME)
 $(OBJ_PATH)%.o: $(SRC_PATH)%.c
 	@$(CC) $(CFLAGS) -c $< -o $@ $(INC)
 
+$(OBJS): $(OBJ_PATH)
+
 $(OBJ_PATH):
 	@mkdir $(OBJ_PATH)
-	@mkdir $(OBJ_PATH) fractal_sets/
-	@mkdir $(OBJ_PATH) color_schemes/
+	@mkdir $(OBJ_PATH)fractal_sets/
+	@mkdir $(OBJ_PATH)color_schemes/
 
 $(MLX):
 	@echo "Making MLX"
