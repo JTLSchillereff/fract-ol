@@ -35,14 +35,14 @@ void	clean_init(t_fractol *f)
 
 void get_complex_layout(t_fractol *f)
 {
-	if (f->set == MANDELBOX)
+	/*if (f->set == MANDELBOX)
 	{
 		f->min_r = -4.0;
 		f->max_r = 4.0;
 		f->min_i = -4.0;
 		f->max_i = f->min_i + (f->max_r - f->min_r) * HEIGHT / WIDTH;
-	}
-	else if (f->set == JULIA)
+	}*/
+	if (f->set == JULIA)
 	{
 		f->min_r = -2.0;
 		f->max_r = 2.0;

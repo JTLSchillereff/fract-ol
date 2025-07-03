@@ -35,12 +35,12 @@ static void	get_set(t_fractol *f, char **av)
 		f->set = MANDELBROT;
 	else if (type_cmp(av[1], "julia", 'j', '2'))
 		f->set = JULIA;
-	else if (type_cmp(av[1], "burning ship", 'b', '3'))
+	/*else if (type_cmp(av[1], "burning ship", 'b', '3'))
 		f->set = BURNING_SHIP;
 	else if (type_cmp(av[1], "tricorn", 't', '4'))
 		f->set = TRICORN;
 	else if (type_cmp(av[1], "mandelbox", 'x', '5'))
-		f->set = MANDELBOX;
+		f->set = MANDELBOX;*/
 	else
 		help_msg(f);
 }
@@ -94,3 +94,4 @@ int	main(int ac, char **av)
 	mlx_mouse_hook(f.win, mouse_event, &f);
 	mlx_loop(f.mlx);
 }
+

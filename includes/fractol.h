@@ -66,15 +66,15 @@ int		julia_shift(int x, int y, t_fractol *f);
 
 /* Colors	*/
 void	color_shift(t_fractol *f);
-void	set_color_mono(t_fractol *f, int color);
-void	set_color_multiple(t_fractol *f, int colors[4], int n);
-void	set_color_zebra(t_fractol *f, int color);
-void	set_color_triad(t_fractol *f, int color);
-void	set_color_tetra(t_fractol *f, int color);
-void	set_color_opposites(t_fractol *f, int color);
-void	set_color_contrasted(t_fractol *f, int color);
-void	set_color_graphic(t_fractol *f, int color);
-int		get_percent_color(int color, double percent);
+//void	set_color_mono(t_fractol *f, int color);	
+//void	set_color_multiple(t_fractol *f, int colors[4], int n);
+//void	set_color_zebra(t_fractol *f, int color);
+//void	set_color_triad(t_fractol *f, int color);
+//void	set_color_tetra(t_fractol *f, int color);
+//void	set_color_opposites(t_fractol *f, int color);
+//void	set_color_contrasted(t_fractol *f, int color);
+//void	set_color_graphic(t_fractol *f, int color);
+//int		get_percent_color(int color, double percent);
 
 /*  Events   */
 int		key_event(int keycode, t_fractol *mlx);

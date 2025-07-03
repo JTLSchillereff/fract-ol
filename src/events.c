@@ -60,12 +60,12 @@ static int key_event_extended(int keycode, t_fractol *mlx)
 		mlx->set = MANDELBROT;
 	else if (keycode == KEY_TWO && mlx->set != JULIA)
 		mlx->set = JULIA;
-	else if (keycode == KEY_THREE && mlx->set != BURNING_SHIP)
-		mlx->set = BURNING_SHIP;
-	else if (keycode == KEY_FOUR && mlx->set != TRICORN)
-		mlx->set = TRICORN;
-	else if (keycode == KEY_FIVE && mlx->set != MANDELBOX)
-		mlx->set = MANDELBOX;
+	//else if (keycode == KEY_THREE && mlx->set != BURNING_SHIP)
+		//mlx->set = BURNING_SHIP;
+	//else if (keycode == KEY_FOUR && mlx->set != TRICORN)
+		///mlx->set = TRICORN;
+	//else if (keycode == KEY_FIVE && mlx->set != MANDELBOX)
+		//mlx->set = MANDELBOX;
 	else
 		return (1);
 	get_complex_layout(mlx);
@@ -92,8 +92,8 @@ int	key_event(int keycode, t_fractol *mlx)
 		move(mlx, 0.2, 'L');
 	else if (keycode == KEY_RIGHT || keycode == KEY_D)
 		move(mlx, 0.2, 'R');
-	else if (keycode == KEY_SPACE)
-		color_shift(mlx);
+	//else if (keycode == KEY_SPACE)
+		//color_shift(mlx);
 	else if (!key_event_extended(keycode, mlx))
 		return (1);
 	else
